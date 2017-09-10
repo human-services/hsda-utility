@@ -1,0 +1,39 @@
+{
+	"title": "service",
+	"description": "This is service object from the hsda-management service.",
+	"type": "array",
+	"patternProperties": {
+		"^X-": {
+			"type": "object"
+		}
+	},
+	"items": {
+		"type": "object",
+		"properties": {
+			"id": {
+				"description": "Each entry must have a unique identifier.",
+				"type": "string"
+			},
+			"user_id": {
+				"description": "The id for the user.",
+				"type": "string"
+			},
+			"name": {
+				"description": "The name of the service the user has access to.",
+				"type": "string"
+			},
+			"path": {
+				"description": "The path user has access to.",
+				"type": "string"
+			},
+			"verb": {
+				"description": "The verb user has access to.",
+				"type": "string"
+			}
+		},
+		"required": ["id",
+		"user_id",
+		"path",
+		"verb"]
+	}
+}

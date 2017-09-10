@@ -1,0 +1,40 @@
+{
+	"title": "event",
+	"description": "This is event object from the hsda-orchestration service.",
+	"type": "array",
+	"patternProperties": {
+		"^X-": {
+			"type": "object"
+		}
+	},
+	"items": {
+		"type": "object",
+		"properties": {
+			"id": {
+				"description": "Each event has unique identifier.",
+				"type": "string"
+			},
+			"service": {
+				"description": "The name of the service the event will run against.",
+				"type": "string"
+			},
+			"path": {
+				"description": "The path the event will run against.",
+				"type": "string"
+			},
+			"verb": {
+				"description": "The verb the event will run against.",
+				"type": "string"
+			},
+			"description": {
+				"description": "The description of the event.",
+				"type": "string"
+			}
+		},
+		"required": ["id",
+		"service",
+		"path",
+		"verb",
+		"description"]
+	}
+}

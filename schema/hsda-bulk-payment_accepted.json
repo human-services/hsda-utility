@@ -1,0 +1,28 @@
+{
+	"title": "payment_accepted",
+	"description": "This is payment_accepted object from the hsda-bulk service.",
+	"type": "array",
+	"patternProperties": {
+		"^X-": {
+			"type": "object"
+		}
+	},
+	"items": {
+		"type": "object",
+		"properties": {
+			"id": {
+				"description": "Each entry must have a unique identifier.",
+				"type": "string"
+			},
+			"service_id": {
+				"description": "The identifier of the services for which the entry describes the accepted payment methods.",
+				"type": "string"
+			},
+			"payment": {
+				"description": "The methods of payment accepted for the service.",
+				"type": "string"
+			}
+		},
+		"required": ["id"]
+	}
+}

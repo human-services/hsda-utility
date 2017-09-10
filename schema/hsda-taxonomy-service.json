@@ -1,0 +1,79 @@
+{
+	"title": "service",
+	"description": "This is service object from the hsda-taxonomy service.",
+	"type": "array",
+	"patternProperties": {
+		"^X-": {
+			"type": "object"
+		}
+	},
+	"items": {
+		"type": "object",
+		"properties": {
+			"id": {
+				"description": "Each service must have a unique identifier.",
+				"type": "string"
+			},
+			"organization_id": {
+				"description": "The identifier of the organization that provides this service.",
+				"type": "string"
+			},
+			"program_id": {
+				"description": "The identifier of the program this service is delivered under.",
+				"type": "string"
+			},
+			"location_id": {
+				"description": "The identifier of the location where this service is delivered.",
+				"type": "string"
+			},
+			"name": {
+				"description": "The official or public name of the service.",
+				"type": "string"
+			},
+			"alternate_name": {
+				"description": "Alternative or commonly used name for a service.",
+				"type": "string"
+			},
+			"description": {
+				"description": "A description of the service.",
+				"type": "string"
+			},
+			"url": {
+				"description": "URL of the service.",
+				"type": "string"
+			},
+			"email": {
+				"description": "Email address for the service.",
+				"type": "string"
+			},
+			"status": {
+				"description": "The current status of the service.",
+				"type": "string"
+			},
+			"interpretation_services": {
+				"description": "A description of any interpretation services available for accessing this service.",
+				"type": "string"
+			},
+			"application_process": {
+				"description": "The steps needed to access the service.",
+				"type": "string"
+			},
+			"wait_time": {
+				"description": "Time a client may expect to wait before receiving a service.",
+				"type": "string"
+			},
+			"fees": {
+				"description": "Details of any charges for service users to access this service.",
+				"type": "string"
+			},
+			"accreditations": {
+				"description": "Details of any accreditations. Accreditation is the formal evaluation of an organization or program against best practice standards set by an accrediting organization.",
+				"type": "string"
+			},
+			"licenses": {
+				"description": "An organization may have a license issued by a government entity to operate legally. A list of any such licenses can be provided here.",
+				"type": "string"
+			}
+		}
+	}
+}

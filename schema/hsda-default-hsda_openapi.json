@@ -1,0 +1,19 @@
+{
+	"title": "hsda_openapi",
+	"description": "This is hsda_openapi object from the hsda-default service.",
+	"type": "array",
+	"patternProperties": {
+		"^X-": {
+			"type": "object"
+		}
+	},
+	"items": {
+		"type": "object",
+		"properties": {
+			"body": {
+				"description": "The HSDA OpenAPI to validate.",
+				"type": "array"
+			}
+		}
+	}
+}

@@ -1,0 +1,35 @@
+{
+	"title": "service",
+	"description": "This is service object from the hsda-utility service.",
+	"type": "array",
+	"patternProperties": {
+		"^X-": {
+			"type": "object"
+		}
+	},
+	"items": {
+		"type": "object",
+		"properties": {
+			"id": {
+				"description": "Each entry must have a unique identifier.",
+				"type": "string"
+			},
+			"name": {
+				"description": "The service name.",
+				"type": "string"
+			},
+			"path": {
+				"description": "The path name.",
+				"type": "string"
+			},
+			"verb": {
+				"description": "The verb.",
+				"type": "string"
+			}
+		},
+		"required": ["id",
+		"name",
+		"path",
+		"verb"]
+	}
+}

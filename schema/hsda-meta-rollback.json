@@ -1,0 +1,19 @@
+{
+	"title": "rollback",
+	"description": "This is rollback object from the hsda-meta service.",
+	"type": "array",
+	"patternProperties": {
+		"^X-": {
+			"type": "object"
+		}
+	},
+	"items": {
+		"type": "object",
+		"properties": {
+			"id": {
+				"description": "The id for the rollback.",
+				"type": "string"
+			}
+		}
+	}
+}

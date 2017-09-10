@@ -1,0 +1,27 @@
+{
+	"title": "schema_build",
+	"description": "This is schema_build object from the hsda-utility service.",
+	"type": "array",
+	"patternProperties": {
+		"^X-": {
+			"type": "object"
+		}
+	},
+	"items": {
+		"type": "object",
+		"properties": {
+			"service": {
+				"description": "The service of the schema",
+				"type": "string"
+			},
+			"definition": {
+				"description": "The definition of the schema.",
+				"type": "string"
+			},
+			"file": {
+				"description": "The file name being created.",
+				"type": "string"
+			}
+		}
+	}
+}

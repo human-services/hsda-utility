@@ -1,0 +1,34 @@
+{
+	"title": "program",
+	"description": "This is program object from the hsda service.",
+	"type": "array",
+	"patternProperties": {
+		"^X-": {
+			"type": "object"
+		}
+	},
+	"items": {
+		"type": "object",
+		"properties": {
+			"id": {
+				"description": "Each program must have a unique identifier.",
+				"type": "string"
+			},
+			"organization_id": {
+				"description": "Each program must belong to a single organization. The identifier of the organization should be given here.",
+				"type": "string"
+			},
+			"name": {
+				"description": "The name of the program.",
+				"type": "string"
+			},
+			"alternate_name": {
+				"description": "NeAn alternative name for the program.",
+				"type": "string"
+			}
+		},
+		"required": ["id",
+		"organization_id",
+		"name"]
+	}
+}

@@ -1,0 +1,28 @@
+{
+	"title": "intepretation_services",
+	"description": "This is intepretation_services object from the hsda-search service.",
+	"type": "array",
+	"patternProperties": {
+		"^X-": {
+			"type": "object"
+		}
+	},
+	"items": {
+		"type": "object",
+		"properties": {
+			"id": {
+				"description": "Each service must have a unique identifier.",
+				"type": "string"
+			},
+			"service_id": {
+				"description": "The identifier of the services for which the entry describes the interpretation services available.",
+				"type": "string"
+			},
+			"language": {
+				"description": "Languages, other than English, for which interpretation is available. Languages are listed as ISO639-1 codes.",
+				"type": "string"
+			}
+		},
+		"required": ["id"]
+	}
+}

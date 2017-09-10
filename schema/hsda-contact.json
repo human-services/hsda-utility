@@ -1,0 +1,48 @@
+{
+	"title": "contact",
+	"description": "This is contact object from the hsda service.",
+	"type": "array",
+	"patternProperties": {
+		"^X-": {
+			"type": "object"
+		}
+	},
+	"items": {
+		"type": "object",
+		"properties": {
+			"id": {
+				"description": "Each contact must have a unique identifier.",
+				"type": "string"
+			},
+			"organization_id": {
+				"description": "The identifier of the organization for which this is a contact.",
+				"type": "string"
+			},
+			"service_id": {
+				"description": "The identifier of the service for which this is a contact.",
+				"type": "string"
+			},
+			"service_at_location_id": {
+				"description": "The identifier of the u2018service at locationu2019 table entry, when this contact is specific to a service in a particular location.",
+				"type": "string"
+			},
+			"name": {
+				"description": "The name of the person.",
+				"type": "string"
+			},
+			"title": {
+				"description": "The job title of the person.",
+				"type": "string"
+			},
+			"department": {
+				"description": "The department that the person is part of.",
+				"type": "string"
+			},
+			"email": {
+				"description": "The email address of the person.",
+				"type": "string"
+			}
+		},
+		"required": ["id"]
+	}
+}

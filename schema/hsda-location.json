@@ -1,0 +1,49 @@
+{
+	"title": "location",
+	"description": "This is location object from the hsda service.",
+	"type": "array",
+	"patternProperties": {
+		"^X-": {
+			"type": "object"
+		}
+	},
+	"items": {
+		"type": "object",
+		"properties": {
+			"id": {
+				"description": "Each location must have a unique identifier.",
+				"type": "string"
+			},
+			"organization_id": {
+				"description": "Each location must belong to a single organization. The identifier of the organization should be given here.",
+				"type": "string"
+			},
+			"name": {
+				"description": "The name of the location.",
+				"type": "string"
+			},
+			"alternate_name": {
+				"description": "An alternative name for the location.",
+				"type": "string"
+			},
+			"description": {
+				"description": "A description of this location.",
+				"type": "string"
+			},
+			"transportation": {
+				"description": "A description of the access to public or private transportation to and from the location.",
+				"type": "string"
+			},
+			"latitude": {
+				"description": "Y coordinate of location expressed in decimal degrees in WGS84 datum.",
+				"type": "string"
+			},
+			"longitude": {
+				"description": "X coordinate of location expressed in decimal degrees in WGS84 datum.",
+				"type": "string"
+			}
+		},
+		"required": ["id",
+		"name"]
+	}
+}

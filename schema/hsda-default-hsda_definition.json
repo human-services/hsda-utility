@@ -1,0 +1,19 @@
+{
+	"title": "hsda_definition",
+	"description": "This is hsda_definition object from the hsda-default service.",
+	"type": "array",
+	"patternProperties": {
+		"^X-": {
+			"type": "object"
+		}
+	},
+	"items": {
+		"type": "object",
+		"properties": {
+			"body": {
+				"description": "The HSDA definition to validate.",
+				"type": "array"
+			}
+		}
+	}
+}

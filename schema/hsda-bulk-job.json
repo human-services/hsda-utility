@@ -1,0 +1,36 @@
+{
+	"title": "job",
+	"description": "This is job object from the hsda-bulk service.",
+	"type": "array",
+	"patternProperties": {
+		"^X-": {
+			"type": "object"
+		}
+	},
+	"items": {
+		"type": "object",
+		"properties": {
+			"id": {
+				"description": "The unique id of the job",
+				"type": "string"
+			},
+			"path": {
+				"description": "The path the job is being run against.",
+				"type": "string"
+			},
+			"verb": {
+				"description": "The verb the job is being run against.",
+				"type": "string"
+			},
+			"status": {
+				"description": "The status of the job.",
+				"type": "string"
+			},
+			"complete": {
+				"description": "The date the job was completed.",
+				"type": "string",
+				"format": "date"
+			}
+		}
+	}
+}

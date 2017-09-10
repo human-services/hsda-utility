@@ -1,0 +1,19 @@
+{
+	"title": "rollforward",
+	"description": "This is rollforward object from the hsda-meta service.",
+	"type": "array",
+	"patternProperties": {
+		"^X-": {
+			"type": "object"
+		}
+	},
+	"items": {
+		"type": "object",
+		"properties": {
+			"id": {
+				"description": "The id for the roll foward.",
+				"type": "string"
+			}
+		}
+	}
+}

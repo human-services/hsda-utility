@@ -1,0 +1,43 @@
+{
+	"title": "validate_definition",
+	"description": "This is validate_definition object from the hsda-utility service.",
+	"type": "array",
+	"patternProperties": {
+		"^X-": {
+			"type": "object"
+		}
+	},
+	"items": {
+		"type": "object",
+		"properties": {
+			"id": {
+				"description": "Each validation has a unique id.",
+				"type": "string"
+			},
+			"service": {
+				"description": "The service that is being validated.",
+				"type": "string"
+			},
+			"path": {
+				"description": "The path that is being validated.",
+				"type": "string"
+			},
+			"verb": {
+				"description": "The verb that is being validated.",
+				"type": "string"
+			},
+			"valid": {
+				"description": "Whether or not the schema was valid.",
+				"type": "boolean"
+			},
+			"message": {
+				"description": "A message describing the validation.",
+				"type": "string"
+			}
+		},
+		"required": ["id",
+		"service",
+		"path",
+		"verb"]
+	}
+}

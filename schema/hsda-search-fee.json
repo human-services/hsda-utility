@@ -1,0 +1,28 @@
+{
+	"title": "fee",
+	"description": "This is fee object from the hsda-search service.",
+	"type": "array",
+	"patternProperties": {
+		"^X-": {
+			"type": "object"
+		}
+	},
+	"items": {
+		"type": "object",
+		"properties": {
+			"id": {
+				"description": "Each entry must have a unique identifier.",
+				"type": "string"
+			},
+			"service_id": {
+				"description": "The identifier of the service for which this entry describes the costs of service.",
+				"type": "string"
+			},
+			"fee": {
+				"description": "A listing of the costs of services, including free ones.",
+				"type": "string"
+			}
+		},
+		"required": ["id"]
+	}
+}

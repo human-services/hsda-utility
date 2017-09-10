@@ -1,0 +1,40 @@
+{
+	"title": "user",
+	"description": "This is user object from the hsda-management service.",
+	"type": "array",
+	"patternProperties": {
+		"^X-": {
+			"type": "object"
+		}
+	},
+	"items": {
+		"type": "object",
+		"properties": {
+			"id": {
+				"description": "Each entry must have a unique identifier.",
+				"type": "string"
+			},
+			"login": {
+				"description": "The login for a user.",
+				"type": "string"
+			},
+			"name": {
+				"description": "The name for a user.",
+				"type": "string"
+			},
+			"email": {
+				"description": "The email for a user.",
+				"type": "string"
+			},
+			"code": {
+				"description": "The unique code for user (Github Token)",
+				"type": "string"
+			}
+		},
+		"required": ["id",
+		"login",
+		"name",
+		"email",
+		"code"]
+	}
+}

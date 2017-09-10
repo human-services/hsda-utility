@@ -1,0 +1,23 @@
+{
+	"title": "error_response",
+	"description": "This is error_response object from the hsda-taxonomy service.",
+	"type": "array",
+	"patternProperties": {
+		"^X-": {
+			"type": "object"
+		}
+	},
+	"items": {
+		"type": "object",
+		"properties": {
+			"code": {
+				"description": "Repeat the HTTP status code",
+				"type": "integer"
+			},
+			"message": {
+				"description": "A plain language message explaining the error",
+				"type": "integer"
+			}
+		}
+	}
+}

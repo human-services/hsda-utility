@@ -1,0 +1,69 @@
+{
+	"title": "physical_address",
+	"description": "This is physical_address object from the hsda-bulk service.",
+	"type": "array",
+	"patternProperties": {
+		"^X-": {
+			"type": "object"
+		}
+	},
+	"items": {
+		"type": "object",
+		"properties": {
+			"id": {
+				"description": "Each physical address must have a unique identifier.",
+				"type": "string"
+			},
+			"location_id": {
+				"description": "The identifier of the location for which this is the address.",
+				"type": "string"
+			},
+			"attention": {
+				"description": "The person or entity whose attention should be sought at the location.",
+				"type": "string"
+			},
+			"address_1": {
+				"description": "The first line of the address.",
+				"type": "string"
+			},
+			"address_2": {
+				"description": "The second line of the address.",
+				"type": "string"
+			},
+			"address_3": {
+				"description": "The third line of the address.",
+				"type": "string"
+			},
+			"address_4": {
+				"description": "The fourth line of the address.",
+				"type": "string"
+			},
+			"city": {
+				"description": "The city in which the address is located.",
+				"type": "string"
+			},
+			"region": {
+				"description": "The region in which the address is located (optional).",
+				"type": "string"
+			},
+			"state_province": {
+				"description": "The state or province in which the address is located.",
+				"type": "string"
+			},
+			"postal_code": {
+				"description": "The postal code for the address.",
+				"type": "string"
+			},
+			"country": {
+				"description": "The country in which the address is located. This should be given as an ISO 3361-1 country code (two letter abbreviation).",
+				"type": "string"
+			}
+		},
+		"required": ["id",
+		"address_1",
+		"city",
+		"state_province",
+		"postal_code",
+		"country"]
+	}
+}

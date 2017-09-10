@@ -1,0 +1,32 @@
+{
+	"title": "language",
+	"description": "This is language object from the hsda-search service.",
+	"type": "array",
+	"patternProperties": {
+		"^X-": {
+			"type": "object"
+		}
+	},
+	"items": {
+		"type": "object",
+		"properties": {
+			"id": {
+				"description": "Each language must have a unique identifier.",
+				"type": "string"
+			},
+			"service_id": {
+				"description": "The identifier of the service for which the entry describes the languages in which services are delivered.",
+				"type": "string"
+			},
+			"location_id": {
+				"description": "The identifier of the location for which the entry describes the languages in which services are delivered.",
+				"type": "string"
+			},
+			"language": {
+				"description": "Languages, other than English, in which the service is delivered. Languages are listed as ISO639-1 codes..",
+				"type": "string"
+			}
+		},
+		"required": ["id"]
+	}
+}

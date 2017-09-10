@@ -1,0 +1,25 @@
+{
+	"title": "webhook",
+	"description": "This is webhook object from the hsda-orchestration service.",
+	"type": "array",
+	"patternProperties": {
+		"^X-": {
+			"type": "object"
+		}
+	},
+	"items": {
+		"type": "object",
+		"properties": {
+			"id": {
+				"description": "Each webhook has a unique identifier.",
+				"type": "string"
+			},
+			"event_id": {
+				"description": "The event id for this webhook.",
+				"type": "string"
+			}
+		},
+		"required": ["id",
+		"event_id"]
+	}
+}

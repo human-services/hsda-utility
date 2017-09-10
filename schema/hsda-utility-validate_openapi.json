@@ -1,0 +1,33 @@
+{
+	"title": "validate_openapi",
+	"description": "This is validate_openapi object from the hsda-utility service.",
+	"type": "array",
+	"patternProperties": {
+		"^X-": {
+			"type": "object"
+		}
+	},
+	"items": {
+		"type": "object",
+		"properties": {
+			"id": {
+				"description": "Each validation has a unique id.",
+				"type": "string"
+			},
+			"service": {
+				"description": "The service that is being validated.",
+				"type": "string"
+			},
+			"valid": {
+				"description": "Whether or not the schema was valid.",
+				"type": "boolean"
+			},
+			"message": {
+				"description": "A message describing the validation.",
+				"type": "string"
+			}
+		},
+		"required": ["id",
+		"service"]
+	}
+}

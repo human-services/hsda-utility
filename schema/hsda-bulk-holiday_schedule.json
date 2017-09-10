@@ -1,0 +1,55 @@
+{
+	"title": "holiday_schedule",
+	"description": "This is holiday_schedule object from the hsda-bulk service.",
+	"type": "array",
+	"patternProperties": {
+		"^X-": {
+			"type": "object"
+		}
+	},
+	"items": {
+		"type": "object",
+		"properties": {
+			"id": {
+				"description": "Each entry must have a unique identifier.",
+				"type": "string"
+			},
+			"service_id": {
+				"description": "The identifier of the service for which this is the holiday schedule.",
+				"type": "string"
+			},
+			"location_id": {
+				"description": "The identifier of the location for which this is the holiday schedule.",
+				"type": "string"
+			},
+			"service_at_location_id": {
+				"description": "The identifier of the u2018service at locationu2019 table entry, when this schedule is specific to a service in a particular location.",
+				"type": "string"
+			},
+			"closed": {
+				"description": "Indicates if a service or location is closed during a public holiday.",
+				"type": "boolean"
+			},
+			"opens_at": {
+				"description": "The time when a service or location opens. This should use HH:MM format and should include timezone information, either adding the suffix u2018Zu2019 when the date is in UTC, or including an offset from UTC (e.g. 09:00-05:00 for 9am East Coast Time.",
+				"type": "string"
+			},
+			"closes_at": {
+				"description": "The time when a service or location closes. This should use HH:MM format and should include timezone information, either adding the suffix u2018Zu2019 when the date is in UTC, or including an offset from UTC (e.g. 09:00-05:00 for 9am East Coast Time.",
+				"type": "string"
+			},
+			"start_date": {
+				"description": "The first day that a service or location is closed during a public or private holiday.",
+				"type": "string"
+			},
+			"end_date": {
+				"description": "The last day that a service or location is closed during a public or private holiday.",
+				"type": "string"
+			}
+		},
+		"required": ["id",
+		"closed",
+		"start_date",
+		"end_date"]
+	}
+}

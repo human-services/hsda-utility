@@ -1,0 +1,110 @@
+{
+	"title": "contact_complete",
+	"description": "This is contact_complete object from the hsda service.",
+	"type": "array",
+	"patternProperties": {
+		"^X-": {
+			"type": "object"
+		}
+	},
+	"items": {
+		"type": "object",
+		"properties": {
+			"id": {
+				"description": "Each contact must have a unique identifier.",
+				"type": "string"
+			},
+			"organization_id": {
+				"description": "The identifier of the organization for which this is a contact.",
+				"type": "string"
+			},
+			"service_id": {
+				"description": "The identifier of the service for which this is a contact.",
+				"type": "string"
+			},
+			"service_at_location_id": {
+				"description": "The identifier of the u2018service at locationu2019 table entry, when this contact is specific to a service in a particular location.",
+				"type": "string"
+			},
+			"name": {
+				"description": "The name of the person.",
+				"type": "string"
+			},
+			"title": {
+				"description": "The job title of the person.",
+				"type": "string"
+			},
+			"department": {
+				"description": "The department that the person is part of.",
+				"type": "string"
+			},
+			"email": {
+				"description": "The email address of the person.",
+				"type": "string"
+			},
+			"phones": {
+				"type": "array",
+				"items": {
+					"$ref": "#/definitions/phone"
+				}
+			}
+		},
+		"required": ["id"],
+		"definitions": {
+			"phones": {
+				"properties": {
+					"id": {
+						"description": "Each entry must have a unique identifier.",
+						"type": "string"
+					},
+					"location_id": {
+						"description": "The identifier of the location where this phone number is located.",
+						"type": "string"
+					},
+					"service_id": {
+						"description": "The identifier of the service for which this is the phone number.",
+						"type": "string"
+					},
+					"organization_id": {
+						"description": "The identifier of the organisation for which this is the phone number.",
+						"type": "string"
+					},
+					"contact_id": {
+						"description": "The identifier of the contact for which this is the phone number.",
+						"type": "string"
+					},
+					"service_at_location_id": {
+						"description": "The identifier of the u2018service at locationu2019 table entry, when this phone number is specific to a service in a particular location.",
+						"type": "string"
+					},
+					"number": {
+						"description": "The phone number.",
+						"type": "string"
+					},
+					"extension": {
+						"description": "The extension of the phone number.",
+						"type": "string"
+					},
+					"type": {
+						"description": "Whether the phone number relates to a fixed or cellular phone.",
+						"type": "string"
+					},
+					"department": {
+						"description": "The department for which this is the phone number.",
+						"type": "string"
+					},
+					"language": {
+						"description": "A comma separated list of ISO 639-1, or ISO 639-2 [language codes](available at http://www.loc.gov/standards/iso639-2/php/code_list.php) to represent the languages available from this phone service. The three-letter codes from ISO 639-2 provide greater accuracy when describing variants of languages, which may be relevant to particular communities.",
+						"type": "string"
+					},
+					"description": {
+						"description": "A description providing extra information about the phone service (e.g. any special arrangements for accessing, or details of availability at particular times.",
+						"type": "string"
+					}
+				},
+				"required": ["id",
+				"number"]
+			}
+		}
+	}
+}

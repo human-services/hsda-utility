@@ -1,0 +1,32 @@
+{
+	"title": "accessibility_for_disabilities",
+	"description": "This is accessibility_for_disabilities object from the hsda-search service.",
+	"type": "array",
+	"patternProperties": {
+		"^X-": {
+			"type": "object"
+		}
+	},
+	"items": {
+		"type": "object",
+		"properties": {
+			"id": {
+				"description": "Each entry must have a unique identifier.",
+				"type": "string"
+			},
+			"location_id": {
+				"description": "The identifier of the location for which the entry describes the accessibility provision.",
+				"type": "string"
+			},
+			"accessibility": {
+				"description": "Description of assistance or infrastructure that facilitate access to clients with disabilities.",
+				"type": "string"
+			},
+			"details": {
+				"description": "Any further details relating to the relevant accessibility arrangements at this location. E.g. whether advance notice is required to use an accessibility facility.",
+				"type": "string"
+			}
+		},
+		"required": ["id"]
+	}
+}

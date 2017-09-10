@@ -1,0 +1,32 @@
+{
+	"title": "service_area",
+	"description": "This is service_area object from the hsda-search service.",
+	"type": "array",
+	"patternProperties": {
+		"^X-": {
+			"type": "object"
+		}
+	},
+	"items": {
+		"type": "object",
+		"properties": {
+			"id": {
+				"description": "Each service area must have a unique identifier.",
+				"type": "string"
+			},
+			"service_id": {
+				"description": "The identifier of the service for which this entry describes the service area.",
+				"type": "string"
+			},
+			"service_area": {
+				"description": "The geographic area where a service is available. This is a free-text description, and so may be precise or indefinite as necessary.",
+				"type": "string"
+			},
+			"description": {
+				"description": "A more detailed description of this service area. Used to provide any additional information that cannot be communicated using the structured area and geometry fields.",
+				"type": "string"
+			}
+		},
+		"required": ["id"]
+	}
+}

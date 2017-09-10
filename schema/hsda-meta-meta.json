@@ -1,0 +1,60 @@
+{
+	"title": "meta",
+	"description": "This is meta object from the hsda-meta service.",
+	"type": "array",
+	"patternProperties": {
+		"^X-": {
+			"type": "object"
+		}
+	},
+	"items": {
+		"type": "object",
+		"properties": {
+			"id": {
+				"description": "Each entry must have a unique identifier.",
+				"type": "string"
+			},
+			"timestamp": {
+				"description": "The timestamp for entry (yyyy-mm-dd)",
+				"type": "string"
+			},
+			"appid": {
+				"description": "The appid for entry.",
+				"type": "string"
+			},
+			"system": {
+				"description": "The system for entry.",
+				"type": "string"
+			},
+			"path": {
+				"description": "The path for entry.",
+				"type": "string"
+			},
+			"verb": {
+				"description": "The verb for entry.",
+				"type": "string"
+			},
+			"request_parameters": {
+				"description": "The parameters for entry.",
+				"type": "string"
+			},
+			"request_headers": {
+				"description": "The header for entry.",
+				"type": "string"
+			},
+			"request_body": {
+				"description": "The body for entry.",
+				"type": "string"
+			},
+			"response_body": {
+				"description": "The body for entry.",
+				"type": "string"
+			},
+			"status": {
+				"description": "The status of this entry (Complete, Waiting)",
+				"type": "string"
+			}
+		},
+		"required": ["id"]
+	}
+}
